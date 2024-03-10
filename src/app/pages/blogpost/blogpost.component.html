@@ -1,0 +1,12 @@
+<main *ngIf="blogpost$ | async as blog">
+  <!-- <pre>
+    {{blog | json}}
+  </pre> -->
+  <div class="blogpost-container">
+    <img [src]="blog.fields.featureImage.fields.file.url" alt="">
+    <h2>{{blog.fields.title}}</h2>
+    <p class="blogpost-author">{{blog.fields.auth}}</p>
+    <p class="blogpost-content" [innerHtml]="_returnHtmlFromRichText(blog.fields.content)">
+    </p>
+  </div>
+</main>
