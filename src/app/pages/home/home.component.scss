@@ -1,0 +1,34 @@
+.blogpost-container{
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+.blogpost-container img{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.blogpost-container h2{
+  margin-bottom: 20px;
+
+}
+
+.blogpost-author {
+  margin-bottom: 20px;
+}
+
+.blogpost-summary{
+  margin-bottom: 20px;
+}
+
+.blogpost-container a{
+  text-decoration: none;
+  color: white;
+  background-color: #353535;
+  padding: 10px 20px;
+  border-radius: 2px;
+  display: inline-block;
+}
