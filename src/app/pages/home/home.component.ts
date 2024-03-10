@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ContentfulService } from 'src/app/services/contentful/contentful.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  contentfulService = inject(ContentfulService)
 
+  blogpost$ : Observable<any> | null = null
+
+  ngOnInit(): void{
+    this.blogpost$ = this.contentfulService.getAllEntries()
+  }
 }

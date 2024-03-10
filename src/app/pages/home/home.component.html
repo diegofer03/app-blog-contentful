@@ -5,3 +5,17 @@
     <span class="logo-text-3">Blog</span>
   </div>
 </header>
+
+<main *ngIf="blogpost$ | async as blogs">
+  <!-- <pre>
+    {{blogs | json}}
+  </pre> -->
+
+  <div class="blogpost-container" *ngFor="let blog of blogs.items">
+    <img [src]="blog.fields.featureImage.fields.file.url" alt="">
+    <h2>{{blog.fields.title}}</h2>
+    <p class="blogpost-author">{{blog.fields.auth}}</p>
+    <p class="blogpost-summary">{{blog.fields.summary}}</p>
+    <a href="#">Read more</a>
+  </div>
+</main>
